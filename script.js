@@ -111,13 +111,15 @@ const start = () => {
 
     // finished timer
     if (count == 0) {
+      debugger;
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      
     }
     count--;
   }, 1000);
